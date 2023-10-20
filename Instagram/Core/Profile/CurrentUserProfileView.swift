@@ -1,29 +1,28 @@
 //
-//  ProfileView.swift
+//  CurrentUserProfileView.swift
 //  Instagram
 //
-//  Created by Y K on 18.10.2023.
+//  Created by Y K on 20.10.2023.
 //
 
 import SwiftUI
 
-struct ProfileView: View {
-    
-    let user: User
-    
+struct CurrentUserProfileView: View {
     private let gridItems: [GridItem] = [
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1)
     ]
+    
     var body: some View {
+        NavigationStack {
             ScrollView {
                 VStack {
                     //Header
                     VStack(spacing: 10) {
                         // pic and stats
                         HStack{
-                            Image(user.profileImageUrl ?? "")
+                            Image("black-panther")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 80, height: 80)
@@ -40,18 +39,14 @@ struct ProfileView: View {
                             }
                         }
                         .padding(.horizontal)
-                        
                         // name and bio
                         VStack(alignment: .leading, spacing: 4) {
-                            if let fullname = user.fullname {
-                                Text(fullname)
-                                    .font(.footnote)
-                                    .fontWeight(.semibold)
-                            }
-                            if let bio  = user.bio {
-                                Text(bio)
-                                    .font(.footnote)
-                            }
+                            Text("Bob Bill")
+                                .font(.footnote)
+                                .fontWeight(.semibold)
+                            
+                            Text("Forever young")
+                                .font(.footnote)
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
@@ -90,10 +85,19 @@ struct ProfileView: View {
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                            .foregroundColor(.black)
+                    }
+                }
+            }
+        }
     }
 }
-   
 
 #Preview {
-    ProfileView(user: User.MOCK_USERS[0])
+    CurrentUserProfileView()
 }

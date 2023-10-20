@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E2A23CD2AE2D89400185759 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A23CC2AE2D89400185759 /* User.swift */; };
+		9E2A23CF2AE2E67100185759 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A23CE2AE2E67100185759 /* CurrentUserProfileView.swift */; };
 		9E83FDC82AE138090086F421 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E83FDC72AE138090086F421 /* FeedView.swift */; };
 		9E83FDCA2AE138120086F421 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E83FDC92AE138120086F421 /* FeedCell.swift */; };
 		9EB013CA2AE291FD002BD2A0 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB013C92AE291FD002BD2A0 /* SearchView.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E2A23CC2AE2D89400185759 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9E2A23CE2AE2E67100185759 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		9E83FDC72AE138090086F421 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		9E83FDC92AE138120086F421 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		9EB013C92AE291FD002BD2A0 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 		9EFEF0C02AE0065A001F62F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9E2A23CC2AE2D89400185759 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				9EFEF0CD2AE00AA7001F62F2 /* ProfileView.swift */,
+				9E2A23CE2AE2E67100185759 /* CurrentUserProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -282,9 +288,11 @@
 				9EFEF0B42AE00626001F62F2 /* ContentView.swift in Sources */,
 				9EB013CC2AE29455002BD2A0 /* LoginView.swift in Sources */,
 				9EFEF0B22AE00626001F62F2 /* InstagramApp.swift in Sources */,
+				9E2A23CF2AE2E67100185759 /* CurrentUserProfileView.swift in Sources */,
 				9EB013CE2AE29A95002BD2A0 /* AddEmailView.swift in Sources */,
 				9EB013D22AE29EBD002BD2A0 /* CreateUsernameView.swift in Sources */,
 				9EB013D62AE2A2E7002BD2A0 /* CompleteSignUpView.swift in Sources */,
+				9E2A23CD2AE2D89400185759 /* User.swift in Sources */,
 				9EB013CA2AE291FD002BD2A0 /* SearchView.swift in Sources */,
 				9EB013D02AE29D8C002BD2A0 /* IGTextFieldModifier.swift in Sources */,
 				9EFEF0D12AE01E05001F62F2 /* UserStatView.swift in Sources */,
