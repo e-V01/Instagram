@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FeedCell: View {
+    let post: Post
     var body: some View {
         VStack {
             // Image + user name
@@ -88,5 +89,5 @@ struct FeedCell: View {
 }
 
 #Preview {
-    FeedCell()
+    FeedCell(post: Post.MOCK_Posts[0])
 }

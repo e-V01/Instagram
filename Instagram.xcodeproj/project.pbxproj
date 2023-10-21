@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0A1A3C2AE3D3A900515108 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A1A3B2AE3D3A900515108 /* Post.swift */; };
 		9E2A23CD2AE2D89400185759 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A23CC2AE2D89400185759 /* User.swift */; };
 		9E2A23CF2AE2E67100185759 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A23CE2AE2E67100185759 /* CurrentUserProfileView.swift */; };
 		9E83FDC82AE138090086F421 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E83FDC72AE138090086F421 /* FeedView.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E0A1A3B2AE3D3A900515108 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		9E2A23CC2AE2D89400185759 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9E2A23CE2AE2E67100185759 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		9E83FDC72AE138090086F421 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				9E2A23CC2AE2D89400185759 /* User.swift */,
+				9E0A1A3B2AE3D3A900515108 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				9EFEF0CE2AE00AA7001F62F2 /* ProfileView.swift in Sources */,
 				9EFEF0B42AE00626001F62F2 /* ContentView.swift in Sources */,
 				9EB013CC2AE29455002BD2A0 /* LoginView.swift in Sources */,
+				9E0A1A3C2AE3D3A900515108 /* Post.swift in Sources */,
 				9EFEF0B22AE00626001F62F2 /* InstagramApp.swift in Sources */,
 				9E2A23CF2AE2E67100185759 /* CurrentUserProfileView.swift in Sources */,
 				9EB013CE2AE29A95002BD2A0 /* AddEmailView.swift in Sources */,
