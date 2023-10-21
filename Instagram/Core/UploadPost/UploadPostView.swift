@@ -11,7 +11,7 @@ import PhotosUI
 struct UploadPostView: View {
     @State private var caption = ""
     @State private var imagePickerPresented = false
-    @State private var photoItem: PhotosPickerItem?
+    @StateObject var viewModel = UploadPostViewModel()
     
     var body: some View {
         VStack {
@@ -46,7 +46,9 @@ struct UploadPostView: View {
                     .frame(width: 100, height: 100)
                     
                 
-                TextField("Enter your caption...", text: $caption, axis: .vertical)
+                TextField("Enter your caption...",
+                          text: $caption,
+                          axis: .vertical)
             }
             .padding()
             Spacer()
@@ -54,7 +56,7 @@ struct UploadPostView: View {
         .onAppear {
             imagePickerPresented.toggle()
         }
-        .photosPicker(isPresented: $imagePickerPresented, selection: $photoItem)
+        .photosPicker(isPresented: $imagePickerPresented, selection: $viewModel.selectedImage)
     }
 }
 
