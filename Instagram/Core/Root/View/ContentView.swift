@@ -9,10 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var viewModel = ContentViewModel()
+    @StateObject var registrationViewModel = RegistrationViewModel()
+
     var body: some View {
         Group {
             if viewModel.userSession == nil {
                 LoginView()
+                    .environmentObject(registrationViewModel)
+                // w/o it our simulator will crash at sign up button since RegistrationViewModel was not init anywhere in the proj
             } else {
                 MainTabView()
             }

@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct CreateUsernameView: View {
-    @State private var username = ""
+//    @State private var username = ""
     @Environment (\.dismiss) var dismiss
     // to dimiss screen 
+    @EnvironmentObject var viewModel: RegistrationViewModel
+
     
     var body: some View {
         VStack(spacing: 12) {
@@ -25,7 +27,7 @@ struct CreateUsernameView: View {
                 .multilineTextAlignment(.center) // incase it is smaller screen(phone)
                 .padding(.horizontal, 24)
             
-            TextField("Username", text: $username)
+            TextField("Username", text: $viewModel.username)
                 .autocapitalization(.none)
                 .modifier(IGTextFieldModifier())
             
