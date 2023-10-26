@@ -8,11 +8,11 @@ Logic of Authentication Service:
 
 Logic of userRegistration:
 1) AuthService: createUser(), uses Shared instance
-2) RegistrationViewModel leads to 
-   a) EmalView
-   b) UsernameView
-   c) PasswordView
-   d) CompleteSignUp
+2) RegistrationViewModel leads to  
+a) EmalView
+b) UsernameView
+c) PasswordView
+d) CompleteSignUp
 
 RegistrationVM contains all the properties needed to sign up that get set throughout the registration flow.
 
