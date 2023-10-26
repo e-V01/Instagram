@@ -17,8 +17,8 @@ struct ContentView: View {
                 LoginView()
                     .environmentObject(registrationViewModel)
                 // w/o it our simulator will crash at sign up button since RegistrationViewModel was not init anywhere in the proj
-            } else {
-                MainTabView()
+            } else if let currentUser = viewModel.currentUser {
+                MainTabView(user: currentUser)
             }
         }
     }
