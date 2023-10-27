@@ -11,6 +11,7 @@ import SwiftUI
 
 @MainActor
 class EditProfileViewModel: ObservableObject {
+    @Published var user: User
     @Published var selectedImage: PhotosPickerItem? {
         didSet { Task { await loadImage(fromItem: selectedImage) }  }
     }
@@ -19,6 +20,10 @@ class EditProfileViewModel: ObservableObject {
     
     @Published var fullname = ""
     @Published var bio = ""
+    
+    init(user: User) {
+        self.user = user
+    }
     
     func loadImage(fromItem item: PhotosPickerItem?) async {
         // async in that case allwos us to avoid completion handler
@@ -34,5 +39,26 @@ class EditProfileViewModel: ObservableObject {
         // all in all it allows us to make asynchronous code into sync way
        
         // since it allwos us to skip completion block and runs code line by line))
+    }
+    
+    func updateUserData() async throws {
+        // update profile img if changed
+        
+        var data = [String: Any]()
+        // update name if changed
+        if !fullname.isEmpty && user.fullname != fullname {
+            data["fullname"] = fullname
+        }
+        // update bio if changed
+        if !bio.isEmpty && user.bio != bio {
+            data["bio"] = bio
+            
+        }
+        
+        if !data.isEmpty {
+            try await Firestore.firestore().collection("users").document(user.id).updateData(data)
+        }
+        
+        
     }
 }
