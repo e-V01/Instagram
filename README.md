@@ -19,3 +19,7 @@ RegistrationVM contains all the properties needed to sign up that get set throug
 Also responsible for callong "createUser()" func in AuthService
 
 The auth service here is the same shared instance that the ContentView is using. When the userSession gets set from the registration flow, it will also update the ContentView.
+
+Recommend to read: https://www.avanderlee.com/swiftui/downloading-caching-images/
+Imported Kingfisher
+
