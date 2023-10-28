@@ -388,8 +388,8 @@
 		9EFEF0CA2AE007D6001F62F2 /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
-				9E2AFB582AED5FC700840142 /* ViewModel */,
 				9E2AFB572AED5FBE00840142 /* View */,
+				9E2AFB582AED5FC700840142 /* ViewModel */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";

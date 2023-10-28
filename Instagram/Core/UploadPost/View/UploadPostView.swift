@@ -19,10 +19,7 @@ struct UploadPostView: View {
             //actio toolbar
             HStack {
                 Button {
-                    caption = ""
-                    viewModel.selectedImage = nil
-                    viewModel.postImage = nil
-                    tabIndex = 0
+                    clearPostDataAndReturnToFeed()
                     // corresponds to home tab
                 } label: {
                     Text("Cancel")
@@ -36,7 +33,11 @@ struct UploadPostView: View {
                 Spacer()
                 
                 Button {
-                  print("Upload")
+                    Task {
+                        try await viewModel.uploadPost(caption: caption)
+                        clearPostDataAndReturnToFeed()
+                        // corresponds to home tab
+                    }
                 } label: {
                     Text("Upload")
                         .fontWeight(.semibold)
@@ -67,6 +68,14 @@ struct UploadPostView: View {
         }
         .photosPicker(isPresented: $imagePickerPresented, 
                       selection: $viewModel.selectedImage)
+    }
+    
+    func clearPostDataAndReturnToFeed() {
+        caption = ""
+        viewModel.selectedImage = nil
+        viewModel.postImage = nil
+        tabIndex = 0
+        // corresponds to home tab
     }
 }
 
