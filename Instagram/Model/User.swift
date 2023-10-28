@@ -25,12 +25,12 @@ struct User: Identifiable, Hashable, Codable {
 
 extension User {
     static var MOCK_USERS: [User] = [
-        .init(id: NSUUID().uuidString, username: "batman", profileImageUrl: "batman", fullname: "Bruce Wayne", bio: "Gotham Dark Knight", email: "batman@gmail.com"),
-        .init(id: NSUUID().uuidString, username: "Venom", profileImageUrl: "venom1", fullname: "Jordan Bucks", bio: "Make Some Bucks", email: "venom1@gmail.com"),
+        .init(id: NSUUID().uuidString, username: "batman", profileImageUrl: nil, fullname: "Bruce Wayne", bio: "Gotham Dark Knight", email: "batman@gmail.com"),
+        .init(id: NSUUID().uuidString, username: "Venom", profileImageUrl: nil, fullname: "Jordan Bucks", bio: "Make Some Bucks", email: "venom1@gmail.com"),
         .init(id: NSUUID().uuidString, username: "Brandon", profileImageUrl: "venom2", fullname: "Michael Popius", bio: "Pop it , Pop it on", email: "venom2@gmail.com"),
-        .init(id: NSUUID().uuidString, username: "Brandy", profileImageUrl: "venom3", fullname: "Wayne Wilky", bio: "Fine Art and Whisky", email: "venom3@gmail.com"),
-        .init(id: NSUUID().uuidString, username: "Iron", profileImageUrl: "ironman", fullname: "Ian Bremann", bio: "Iron your life", email: "ironman@gmail.com"),
-        .init(id: NSUUID().uuidString, username: "Spider", profileImageUrl: "spiderman", fullname: nil, bio: "Hue, Contrast and Light", email: "spiderman@gmail.com"),
-        .init(id: NSUUID().uuidString, username: "Beardman", profileImageUrl: "batman2", fullname: "Mickey Berns", bio: "Mickey Mouse and Tom", email: "batman2@gmail.com")
+        .init(id: NSUUID().uuidString, username: "Brandy", profileImageUrl: nil, fullname: "Wayne Wilky", bio: "Fine Art and Whisky", email: "venom3@gmail.com"),
+        .init(id: NSUUID().uuidString, username: "Iron", profileImageUrl: nil, fullname: "Ian Bremann", bio: "Iron your life", email: "ironman@gmail.com"),
+        .init(id: NSUUID().uuidString, username: "Spider", profileImageUrl: nil, fullname: nil, bio: "Hue, Contrast and Light", email: "spiderman@gmail.com"),
+        .init(id: NSUUID().uuidString, username: "Beardman", profileImageUrl: nil, fullname: "Mickey Berns", bio: "Mickey Mouse and Tom", email: "batman2@gmail.com")
     ]
 }
