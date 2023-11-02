@@ -14,6 +14,7 @@ struct FeedView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 32) {
+                    // won`t load smth unused or unseen
                     ForEach(viewModel.posts) { post in
                         FeedCell(post: post)
                         
