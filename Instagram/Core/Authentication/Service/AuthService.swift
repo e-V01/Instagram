@@ -50,9 +50,7 @@ class AuthService {
         self.userSession = Auth.auth().currentUser
         // if we have our user logged in or not
         guard let currentUid = userSession?.uid else { return }
-        let snapshot = try await Firestore.firestore().collection("users").document(currentUid).getDocument()
-        self.currentUser = try? snapshot.data(as: User.self)
-        // inverse operation encoding operation
+        self.currentUser = try await UserService.fetchUser(withUid: currentUid)
     }
     
     func signout() {
